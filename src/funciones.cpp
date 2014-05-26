@@ -13,8 +13,10 @@
 
 using namespace std;
 
-void mostrarSincronizaciones(){
+void mostrarSincronizaciones(Sincronizacion *sinc){
     cout << "[[Aquí aparecen las sincronizaciones]]" << endl;
+    sinc->imprimir();
+    
 }
 
 void ejecutarSincronizaciones(){
@@ -50,9 +52,9 @@ void ayuda(){
     cout << endl;
 }
 
-void cargarFicheroCfg(char *ubic){
+Sincronizacion * cargarFicheroCfg(char *ubic){
     cout << "[[Carga de fichero .cfg: " << ubic << "]]"<< endl;
-    Sincronizacion sc(ubic);
+    return new Sincronizacion(ubic);
 }
 
 void anadirSincronizacion(char *c1, char *c2, char *opt){

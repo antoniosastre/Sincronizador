@@ -12,6 +12,11 @@ using namespace std;
 
 
 
+
+Sincronizacion :: Sincronizacion(){
+    
+}
+
 Sincronizacion :: Sincronizacion(const char* fichero){
     
     int correcto;
@@ -24,4 +29,9 @@ Sincronizacion :: Sincronizacion(const char* fichero){
     }
     
     
+}
+
+void Sincronizacion::imprimir(){
+    
+    cout   << "Imprimiendo" << endl;
 }

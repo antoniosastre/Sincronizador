@@ -16,7 +16,9 @@ class Sincronizacion{
     
 public:
     
-     Sincronizacion(const char* fichero);
+    Sincronizacion();
+    Sincronizacion(const char* fichero);
+    void imprimir();
     
 private:
     

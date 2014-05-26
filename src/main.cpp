@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "funciones.h"
+#include "Sincronizacion.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ int main(int argc, const char * argv[]){
 
     int cflag = 0;
     bool mostrarAyuda = false;
+    static Sincronizacion *sinc;
 
     if (argc<=1) {
         mostrarAyuda = true;
@@ -28,7 +30,7 @@ int main(int argc, const char * argv[]){
                 
                 if(i+1<argc && argv[i+1][0] != '-'){
                     cflag=1;
-                    cargarFicheroCfg((char *)argv[++i]);
+                    sinc = cargarFicheroCfg((char *)argv[++i]);
                 }else{
                     mostrarAyuda = true;
                 }
@@ -55,7 +57,7 @@ int main(int argc, const char * argv[]){
                 
             }else if(cflag==1 && argv[i][0] == '-' && argv[i][1] == 'l'){
 
-                    mostrarSincronizaciones();
+                    mostrarSincronizaciones(sinc);
            
             }else if(argv[i][0] == '-' && argv[i][1] == 's'){
                 
@@ -92,6 +94,7 @@ int main(int argc, const char * argv[]){
     }
     
     if (mostrarAyuda) ayuda();
+    delete sinc;
     
     return 0;
 }
