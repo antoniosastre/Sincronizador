@@ -8,6 +8,7 @@
 
 #include "Sincronizacion.h"
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 
@@ -33,5 +34,35 @@ Sincronizacion :: Sincronizacion(const char* fichero){
 
 void Sincronizacion::imprimir(){
     
-    cout   << "Imprimiendo" << endl;
+    cout << endl;
+    
+    for (int i = 0; i < sincros; i++) {
+        
+        cout << "[Sincro " << i+1 << "]" << endl;
+        cout << "   Orig: " << carpetas1[i] << endl;
+        cout << "   Dest: " << carpetas2[i] << endl;
+        
+        if (tipos[i] == 1) {
+            cout << "   Tipo: Orig -> Dest" << endl << endl;
+        }else if (tipos[i] == 2){
+            cout << "   Tipo: Orig <-> Dest" << endl << endl;
+        }
+        
+    }
+    
+}
+
+void Sincronizacion::insertar(char *c1, char *c2, char *opt){
+    
+    for (int i=0 ; i < sincros; i++) {
+        for (int j=0 ; j < sincros; j++) {
+            
+            if (i != j && strcmp(&c1[i],carpetas1[j]) == 0 && strcmp(&c2[i],carpetas2[j]) == 0) {
+                
+            }
+            
+        }
+    }
+    
+    
 }

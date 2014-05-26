@@ -19,6 +19,7 @@ public:
     Sincronizacion();
     Sincronizacion(const char* fichero);
     void imprimir();
+    void insertar(char *c1, char *c2, char *opt);
     
 private:
     

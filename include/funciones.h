@@ -8,11 +8,10 @@
 
 #include "Sincronizacion.h"
 
-void mostrarSincronizaciones(Sincronizacion *sinc);
+void mostrarSincronizaciones();                             //Listo
 void ejecutarSincronizaciones();
 void ejecutarSincronizaciones(char *c1, char *c2);
-void ayuda();
-Sincronizacion * cargarFicheroCfg(char *ubic);
+void ayuda();                                               //Listo
+void cargarFicheroCfg(char *ubic);                          //Listo
 void anadirSincronizacion(char *c1, char *c2, char *opt);
 void borrarSincronizacion(char *c1, char *c2);
-void salir();
