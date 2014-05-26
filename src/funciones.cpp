@@ -9,6 +9,7 @@
 #include "funciones.h"
 #include <iostream>
 #include "Sincronizacion.h"
+#include <cstdlib>
 
 
 using namespace std;
@@ -59,9 +60,10 @@ void cargarFicheroCfg(char *ubic){
 
 void anadirSincronizacion(char *c1, char *c2, char *opt){
     cout << "[[Añade la sincronización: \"" << c1 << " - " << c2 << " - " << opt << "\" a la lista]]"<< endl;
-    sinc.insertar(c1, c2, opt);
+    sinc.insertar(c1, c2, atoi(opt));
 }
 
 void borrarSincronizacion(char* c1, char *c2){
     cout << "[[Borra la sincronización entre: \"" << c1 << " y " << c2 << "\" de la lista]]"<< endl;
+    sinc.eliminar(c1, c2);
 }

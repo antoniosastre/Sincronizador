@@ -19,10 +19,12 @@ public:
     Sincronizacion();
     Sincronizacion(const char* fichero);
     void imprimir();
-    void insertar(char *c1, char *c2, char *opt);
+    void insertar(char *c1, char *c2, int opt);
+    void eliminar(char *c1, char *c2);
     
 private:
     
+    char *fichero;
     int sincros;
     char **carpetas1;
     char **carpetas2;
