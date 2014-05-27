@@ -13,16 +13,16 @@
 
 
 using namespace std;
-Sincronizacion *sinc;
+Sincronizacion sinc;
 
 void mostrarSincronizaciones(){
     cout << "Sincronizaciones del fichero de configuración:" << endl;
-    sinc->imprimir();
+    sinc.imprimir();
 }
 
 void ejecutarSincronizaciones(){
     cout << "[[Aquí se ejecutan las sincronizaciones]]" << endl;
-    sinc->ejecutar();
+    sinc.ejecutar();
 }
 
 void ejecutarSincronizaciones(char *c1, char *c2){
@@ -56,20 +56,15 @@ void ayuda(){
 
 void cargarFicheroCfg(char *ubic){
     cout << "[[Carga de fichero .cfg: " << ubic << "]]"<< endl;
-    sinc = new Sincronizacion(ubic);
-    cout << "Done." << endl;
+    sinc = Sincronizacion(ubic);
 }
 
 void anadirSincronizacion(char *c1, char *c2, int opt){
     cout << "[[Añade la sincronización: \"" << c1 << " - " << c2 << " - " << opt << "\" a la lista]]"<< endl;
-    sinc->insertar(c1, c2, opt);
+    sinc.insertar(c1, c2, opt);
 }
 
 void borrarSincronizacion(char* c1, char *c2){
     cout << "[[Borra la sincronización entre: \"" << c1 << " y " << c2 << "\" de la lista]]"<< endl;
-    sinc->eliminar(c1, c2);
-}
-
-void salir(){
-    delete sinc;
+    sinc.eliminar(c1, c2);
 }

@@ -98,7 +98,6 @@ int main(int argc, const char * argv[]){
     }
     
     if (mostrarAyuda) ayuda();
-    salir();
     
     return 0;
 }
