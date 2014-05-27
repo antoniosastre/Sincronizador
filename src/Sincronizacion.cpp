@@ -174,7 +174,7 @@ void Sincronizacion::eliminar(char *c1, char *c2){
         int * ntipos= new int[sincros-1];
         
         int j = 0;
-        for (int i = 0; i<sincros-1; i++) {
+        for (int i = 0; i<sincros; i++) {
            
             if (i!=posicion){
             ncarpetas1[j] = new char[strlen(carpetas1[i])+1];
@@ -185,7 +185,7 @@ void Sincronizacion::eliminar(char *c1, char *c2){
         }
         
         j=0;
-        for (int i = 0; i<sincros-1; i++) {
+        for (int i = 0; i<sincros; i++) {
             
             if (i!=posicion){
             ncarpetas2[j] = new char[strlen(carpetas2[i])+1];
@@ -195,16 +195,15 @@ void Sincronizacion::eliminar(char *c1, char *c2){
         }
         
         j=0;
-        for (int i = 0; i<sincros-1; i++) {
+        for (int i = 0; i<sincros; i++) {
             
             if (i!=posicion){
-            ntipos[i]= tipos[i];
+            ntipos[j]= tipos[i];
                 j++;
             }
         }
         
         borrado = GuardarConfiguracion(this->fichero, ncarpetas1, ncarpetas2, ntipos, sincros-1);
-        
         
         for (int i = sincros-1; i>=0; i--) {
             delete [] carpetas1[i];
@@ -235,7 +234,7 @@ void Sincronizacion::eliminar(char *c1, char *c2){
     }
     
     if (borrado == 0 && existe) {
-        cout << "[[Enlace de sincronización: \"" << c1 << " - " << c2 << " - " << "\" borrado]]" << endl;
+        cout << "[[Enlace de sincronización: \"" << c1 << " - " << c2 << "\" borrado]]" << endl;
     }else if(!existe){
         cout << "[[Enlace de sincronización entre \"" << c1 << " y " << c2 << "\" no existente]]" << endl;
     }else if (borrado != 0){
@@ -244,3 +243,96 @@ void Sincronizacion::eliminar(char *c1, char *c2){
     
     
 }
+
+
+void Sincronizacion::ejecutar(){
+    
+    for (int i=0; i<sincros; i++) {
+        ejecutar(carpetas1[i], carpetas2[i], tipos[i]);
+    }
+}
+
+
+void Sincronizacion::ejecutar(char *c1, char *c2){
+    
+    for (int i=0 ; i < sincros; i++) {
+        
+        if (strcmp(c1,carpetas1[i]) == 0 && strcmp(c2,carpetas2[i]) == 0) {
+            ejecutar(c1, c2, tipos[i]);
+            return;
+        }
+    }
+}
+
+
+void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
+    
+    int error1;
+    int error2;
+    
+    char **archivos1;
+    char **archivos2;
+    
+    int nf1;
+    int nf2;
+    
+    error1 = getCarpeta(c1, archivos1, nf1);
+    error2 = getCarpeta(c2, archivos2, nf2);
+    
+    if (opt == 1) {
+        
+        for (int i=0; i<nf1; i++) {
+            for (int j=0; j<nf2; j++) {
+                
+            }
+        }
+        
+    }else if(opt == 2){
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,7 @@
 #include <iostream>
 #include "funciones.h"
 #include "Sincronizacion.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -46,8 +47,12 @@ int main(int argc, const char * argv[]){
                 if (cflag==1 && i+3<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-' && argv[i+3][0] != '-'){
                     char *c1 = (char *)argv[++i];
                     char *c2 = (char *)argv[++i];
-                    char *opt = (char *)argv[++i];
-                    anadirSincronizacion(c1, c2, opt);
+                    int opt = atoi(argv[++i]);
+                    if (opt==1 || opt==2) {
+                        anadirSincronizacion(c1, c2, opt);
+                    }else{
+                        mostrarAyuda = true;
+                    }
                     
                 }else{
                     mostrarAyuda = true;

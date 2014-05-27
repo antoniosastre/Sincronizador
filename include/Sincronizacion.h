@@ -21,6 +21,8 @@ public:
     void imprimir();
     void insertar(char *c1, char *c2, int opt);
     void eliminar(char *c1, char *c2);
+    void ejecutar();
+    void ejecutar(char *c1, char *c2);
     
 private:
     
@@ -32,7 +34,7 @@ private:
     int config;
     
     
-    
+    void ejecutar(char *c1, char *c2, int opt);
     
     
     

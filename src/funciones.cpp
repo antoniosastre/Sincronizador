@@ -58,9 +58,9 @@ void cargarFicheroCfg(char *ubic){
     sinc = Sincronizacion(ubic);
 }
 
-void anadirSincronizacion(char *c1, char *c2, char *opt){
+void anadirSincronizacion(char *c1, char *c2, int opt){
     cout << "[[Añade la sincronización: \"" << c1 << " - " << c2 << " - " << opt << "\" a la lista]]"<< endl;
-    sinc.insertar(c1, c2, atoi(opt));
+    sinc.insertar(c1, c2, opt);
 }
 
 void borrarSincronizacion(char* c1, char *c2){
