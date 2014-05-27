@@ -15,3 +15,4 @@ void ayuda();                                               //Listo
 void cargarFicheroCfg(char *ubic);                          //Listo
 void anadirSincronizacion(char *c1, char *c2, int opt);   //Listo
 void borrarSincronizacion(char *c1, char *c2);              //Listo
+void salir();
