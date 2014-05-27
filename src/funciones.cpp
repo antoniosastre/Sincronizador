@@ -22,6 +22,7 @@ void mostrarSincronizaciones(){
 
 void ejecutarSincronizaciones(){
     cout << "[[Aquí se ejecutan las sincronizaciones]]" << endl;
+    sinc.ejecutar();
 }
 
 void ejecutarSincronizaciones(char *c1, char *c2){
