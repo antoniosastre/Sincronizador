@@ -18,7 +18,6 @@ public:
     
     Sincronizacion();
     Sincronizacion(const char* fichero);
-    //~Sincronizacion();
     void imprimir();
     void insertar(char *c1, char *c2, int opt);
     void eliminar(char *c1, char *c2);
