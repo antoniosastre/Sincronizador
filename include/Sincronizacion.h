@@ -24,6 +24,7 @@ public:
     void ejecutar();
     void ejecutar(char *c1, char *c2);
     ~Sincronizacion();
+    Sincronizacion & operator=(const Sincronizacion &sinc);
     
 private:
     

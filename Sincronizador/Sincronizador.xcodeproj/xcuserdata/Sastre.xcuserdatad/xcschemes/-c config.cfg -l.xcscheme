@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA135D54192257A600CC080D"
-               BuildableName = "MP Practica 2"
-               BlueprintName = "MP Practica 2"
-               ReferencedContainer = "container:MP Practica 2.xcodeproj">
+               BlueprintIdentifier = "CA4B8EFF19361CB800DFF88B"
+               BuildableName = "Sincronizador"
+               BlueprintName = "Sincronizador"
+               ReferencedContainer = "container:Sincronizador.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA135D54192257A600CC080D"
-            BuildableName = "MP Practica 2"
-            BlueprintName = "MP Practica 2"
-            ReferencedContainer = "container:MP Practica 2.xcodeproj">
+            BlueprintIdentifier = "CA4B8EFF19361CB800DFF88B"
+            BuildableName = "Sincronizador"
+            BlueprintName = "Sincronizador"
+            ReferencedContainer = "container:Sincronizador.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,15 +51,19 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA135D54192257A600CC080D"
-            BuildableName = "MP Practica 2"
-            BlueprintName = "MP Practica 2"
-            ReferencedContainer = "container:MP Practica 2.xcodeproj">
+            BlueprintIdentifier = "CA4B8EFF19361CB800DFF88B"
+            BuildableName = "Sincronizador"
+            BlueprintName = "Sincronizador"
+            ReferencedContainer = "container:Sincronizador.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-h"
+            argument = "-c ./config.cfg"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-l"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -75,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA135D54192257A600CC080D"
-            BuildableName = "MP Practica 2"
-            BlueprintName = "MP Practica 2"
-            ReferencedContainer = "container:MP Practica 2.xcodeproj">
+            BlueprintIdentifier = "CA4B8EFF19361CB800DFF88B"
+            BuildableName = "Sincronizador"
+            BlueprintName = "Sincronizador"
+            ReferencedContainer = "container:Sincronizador.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

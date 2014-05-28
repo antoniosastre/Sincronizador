@@ -13,19 +13,18 @@
 
 
 using namespace std;
-Sincronizacion sinc;
 
-void mostrarSincronizaciones(){
+void mostrarSincronizaciones(Sincronizacion &sinc){
     cout << "Sincronizaciones del fichero de configuración:" << endl;
     sinc.imprimir();
 }
 
-void ejecutarSincronizaciones(){
+void ejecutarSincronizaciones(Sincronizacion &sinc){
     cout << "[[Aquí se ejecutan las sincronizaciones]]" << endl;
     sinc.ejecutar();
 }
 
-void ejecutarSincronizaciones(char *c1, char *c2){
+void ejecutarSincronizaciones(char *c1, char *c2, Sincronizacion &sinc){
     cout << "[[Solo se ejecuta la sincronización entre: \"" << c1 << " y " << c2 << "\" pasada por argumento]]" << endl;
 }
 
@@ -54,17 +53,18 @@ void ayuda(){
     cout << endl;
 }
 
-void cargarFicheroCfg(char *ubic){
+Sincronizacion cargarFicheroCfg(char *ubic, Sincronizacion &sinc){
     cout << "[[Carga de fichero .cfg: " << ubic << "]]"<< endl;
-    sinc = Sincronizacion(ubic);
+    return Sincronizacion(ubic);
 }
 
-void anadirSincronizacion(char *c1, char *c2, int opt){
+
+void anadirSincronizacion(char *c1, char *c2, int opt, Sincronizacion &sinc){
     cout << "[[Añade la sincronización: \"" << c1 << " - " << c2 << " - " << opt << "\" a la lista]]"<< endl;
     sinc.insertar(c1, c2, opt);
 }
 
-void borrarSincronizacion(char* c1, char *c2){
+void borrarSincronizacion(char* c1, char *c2, Sincronizacion &sinc){
     cout << "[[Borra la sincronización entre: \"" << c1 << " y " << c2 << "\" de la lista]]"<< endl;
     sinc.eliminar(c1, c2);
 }

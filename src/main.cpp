@@ -17,6 +17,7 @@ int main(int argc, const char * argv[]){
 
     int cflag = 0;
     bool mostrarAyuda = false;
+    Sincronizacion sinc;
 
     if (argc<=1) {
         mostrarAyuda = true;
@@ -30,7 +31,7 @@ int main(int argc, const char * argv[]){
                 
                 if(i+1<argc && argv[i+1][0] != '-'){
                     cflag=1;
-                    cargarFicheroCfg((char *)argv[++i]);
+                    sinc = cargarFicheroCfg((char *)argv[++i], sinc);
                 }else{
                     mostrarAyuda = true;
                 }
@@ -49,7 +50,7 @@ int main(int argc, const char * argv[]){
                     char *c2 = (char *)argv[++i];
                     int opt = atoi(argv[++i]);
                     if (opt==1 || opt==2) {
-                        anadirSincronizacion(c1, c2, opt);
+                        anadirSincronizacion(c1, c2, opt, sinc);
                     }else{
                         mostrarAyuda = true;
                     }
@@ -61,18 +62,18 @@ int main(int argc, const char * argv[]){
                 
             }else if(cflag==1 && argv[i][0] == '-' && argv[i][1] == 'l'){
 
-                    mostrarSincronizaciones();
+                    mostrarSincronizaciones(sinc);
            
             }else if(argv[i][0] == '-' && argv[i][1] == 's'){
                 
                 if (cflag==1 && i+2<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-'){
                     char *c1 = (char *)argv[++i];
                     char *c2 = (char *)argv[++i];
-                    ejecutarSincronizaciones(c1, c2);
+                    ejecutarSincronizaciones(c1, c2, sinc);
                     
                 }else if(cflag==1){
         
-                    ejecutarSincronizaciones();
+                    ejecutarSincronizaciones(sinc);
                 
                 }else{
                    mostrarAyuda = true;
@@ -85,7 +86,7 @@ int main(int argc, const char * argv[]){
                 if (cflag==1 && i+2<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-'){
                     char *c1 = (char *)argv[++i];
                     char *c2 = (char *)argv[++i];
-                    borrarSincronizacion(c1, c2);
+                    borrarSincronizacion(c1, c2, sinc);
                     
                 }else{
                     mostrarAyuda = true;

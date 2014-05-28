@@ -12,16 +12,22 @@
 using namespace std;
 
 Sincronizacion :: Sincronizacion(){
+    fichero=new char[2];
+    carpetas1=new char*[0];
+    carpetas2=new char*[0];
+    tipos=new int[0];
+    sincros=0;
     
 }
 
 Sincronizacion :: Sincronizacion(const char* fichero){
     
-    int correcto;
+    bool correcto;
+    this->fichero = new char[strlen(fichero)+1];
     strcpy(this->fichero, fichero);
-    correcto = LeerConfiguracion(fichero, carpetas1, carpetas2, tipos, sincros);
+    correcto = LeerConfiguracion(this->fichero, carpetas1, carpetas2, tipos, sincros);
     
-    if (correcto == 0){
+    if (correcto == true){
     cout << "[[Fichero leído correctamente. Se han encontrado: " << sincros << " sincronizaciones.]]" << endl;
     }else{
         cout << "[[Error leyendo el archivo de configuracion: " << fichero << " con error "<< correcto << "]]" << endl;
@@ -33,16 +39,40 @@ Sincronizacion :: Sincronizacion(const char* fichero){
 
 Sincronizacion :: ~Sincronizacion(){
     
-//    for (int i = sincros-1; i>=0; i--) {
-//        delete [] carpetas1[i];
-//        delete [] carpetas2[i];
-//    }
+    for (int i = sincros-1; i>=0; i--) {
+        delete [] carpetas1[i];
+        delete [] carpetas2[i];
+   }
     
-   // delete [] carpetas1;
-    //delete [] carpetas2;
+    delete [] carpetas1;
+    delete [] carpetas2;
     
-   //delete [] tipos;
+   delete [] tipos;
+    delete [] fichero;
     
+}
+
+Sincronizacion & Sincronizacion :: operator=(const Sincronizacion &sinc){
+    
+    this->carpetas1 = new char*[sinc.sincros];
+    this->carpetas2 = new char*[sinc.sincros];
+    this->tipos = new int[sinc.sincros];
+    this->fichero = new char[strlen(sinc.fichero)+1];
+    
+     strcpy(this->fichero, sinc.fichero);
+    this->sincros = sinc.sincros;
+    
+    for (int i=0; i<sinc.sincros ; i++) {
+        this->carpetas1[i]=new char[strlen(sinc.carpetas1[i])+1];
+        this->carpetas2[i]=new char[strlen(sinc.carpetas2[i])+1];
+        strcpy(this->carpetas1[i], sinc.carpetas1[i]);
+        strcpy(this->carpetas2[i], sinc.carpetas2[i]);
+        this->tipos[i] = sinc.tipos[i];
+    }
+    
+   
+    
+return *this;
 }
 
 
