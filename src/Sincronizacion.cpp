@@ -11,11 +11,6 @@
 #include <cstring>
 using namespace std;
 
-char barra = {'/'};
-
-
-
-
 Sincronizacion :: Sincronizacion(){
     
 }
@@ -34,6 +29,22 @@ Sincronizacion :: Sincronizacion(const char* fichero){
     
     
 }
+
+
+Sincronizacion :: ~Sincronizacion(){
+    
+//    for (int i = sincros-1; i>=0; i--) {
+//        delete [] carpetas1[i];
+//        delete [] carpetas2[i];
+//    }
+    
+   // delete [] carpetas1;
+    //delete [] carpetas2;
+    
+   //delete [] tipos;
+    
+}
+
 
 void Sincronizacion::imprimir(){
     
@@ -294,11 +305,11 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
                 
                 strcpy(temp1, c1);
-                strcat(temp1, &barra);
+                strcat(temp1, "/");
                 strcat(temp1, archivos1[i]);
                 
                 strcpy(temp2, c2);
-                strcat(temp2, &barra);
+                strcat(temp2, "/");
                 strcat(temp2, archivos1[i]);
                 
                 //copiarFichero(temp1, temp2);
@@ -310,7 +321,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             }else if (strcmp(archivos1[i],archivos2[j])>0){
                 char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
                 strcpy(temp, c2);
-                strcat(temp, &barra);
+                strcat(temp, "/");
                 strcat(temp, archivos2[j]);
                 //eliminarFichero(temp);
                 cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
@@ -330,11 +341,11 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
             
             strcpy(temp1, c1);
-            strcat(temp1, &barra);
+            strcat(temp1, "/");
             strcat(temp1, archivos1[i]);
             
             strcpy(temp2, c2);
-            strcat(temp2, &barra);
+            strcat(temp2, "/");
             strcat(temp2, archivos1[i]);
             
             //copiarFichero(temp1, temp2);
@@ -348,7 +359,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             
             char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
             strcpy(temp, c2);
-            strcat(temp, &barra);
+            strcat(temp, "/");
             strcat(temp, archivos2[j]);
             //eliminarFichero(temp);
             cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
@@ -363,6 +374,20 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
         
         
     }
+    
+    for (int i= nf1-1; i>=0; i--) {
+        delete [] archivos1[i];
+    }
+    
+    delete [] archivos1;
+    
+    for (int i= nf2-1; i>=0; i--) {
+        delete [] archivos2[i];
+    }
+    
+    delete [] archivos2;
+    
+    
     
 }
 

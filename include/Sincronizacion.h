@@ -23,6 +23,7 @@ public:
     void eliminar(char *c1, char *c2);
     void ejecutar();
     void ejecutar(char *c1, char *c2);
+    ~Sincronizacion();
     
 private:
     
