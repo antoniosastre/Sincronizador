@@ -19,7 +19,7 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     
     fe.open(fichero);
     if (!fe)
-        return false;
+        return 1;
     
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
     sincs = atoi(buffer);
@@ -52,6 +52,6 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     
     fe.close();
     
-    return true;
+    return 0;
 
 }
