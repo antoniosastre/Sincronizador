@@ -342,7 +342,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 strcat(temp2, "/");
                 strcat(temp2, archivos1[i]);
                 
-                //copiarFichero(temp1, temp2);
+                copiarFichero(temp1, temp2);
                 cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
                 delete [] temp1;
                 delete [] temp2;
@@ -378,7 +378,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             strcat(temp2, "/");
             strcat(temp2, archivos1[i]);
             
-            //copiarFichero(temp1, temp2);
+            copiarFichero(temp1, temp2);
             cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
             delete [] temp1;
             delete [] temp2;
