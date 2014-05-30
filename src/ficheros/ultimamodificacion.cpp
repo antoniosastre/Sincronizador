@@ -15,6 +15,6 @@ int ultimaModificacion(char *archivo) {
 
 	struct stat _buf;
 	stat(archivo, &_buf);
-	return _buf.st_mtime/100;
+	return (int) _buf.st_mtime/100;
 }
 
