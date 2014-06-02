@@ -361,7 +361,35 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 j++;
                 
             }else if (strcmp(archivos1[i],archivos2[j])==0){
-                cout << "Se respeta el archivo " << archivos1[i] << endl;
+                cout << "Se actualiza el archivo " << archivos1[i] << endl;
+                
+                char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                
+                strcpy(temp1, c1);
+                strcat(temp1, "/");
+                strcat(temp1, archivos1[i]);
+                
+                strcpy(temp2, c2);
+                strcat(temp2, "/");
+                strcat(temp2, archivos1[i]);
+                
+                cout << temp1 << endl;
+                cout << temp2 << endl;
+                
+                if (esFichero(temp1) && esFichero(temp2)){
+                    cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
+                    if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                    }
+                }
+                
+                delete [] temp1;
+                delete [] temp2;
+                
                 i++;
                 j++;
             }
