@@ -31,7 +31,10 @@ int main(int argc, const char * argv[]){
                 
                 if(i+1<argc && argv[i+1][0] != '-'){
                     cflag=1;
-                    sinc = cargarFicheroCfg((char *)argv[++i], sinc);
+                    if(!cargarFicheroCfg((char *)argv[++i], sinc)){
+                        cout << "[[No se ha podido leer la configuración]]" << endl;
+                        return 1;
+                    }
                 }else{
                     mostrarAyuda = true;
                 }

@@ -53,9 +53,13 @@ void ayuda(){
     cout << endl;
 }
 
-Sincronizacion cargarFicheroCfg(char *ubic, Sincronizacion &sinc){
+bool cargarFicheroCfg(char *ubic, Sincronizacion &sinc){
     cout << "[[Carga de fichero .cfg: " << ubic << "]]"<< endl;
-    return Sincronizacion(ubic);
+    sinc = Sincronizacion(ubic);
+    if (sinc.error==0) {
+        return true;
+    }
+    return false;
 }
 
 

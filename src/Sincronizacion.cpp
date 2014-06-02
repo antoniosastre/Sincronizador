@@ -17,6 +17,7 @@ Sincronizacion :: Sincronizacion(){
     carpetas2=new char*[0];
     tipos=new int[0];
     sincros=0;
+    error=0;
     
 }
 
@@ -31,6 +32,7 @@ Sincronizacion :: Sincronizacion(const char* fichero){
     cout << "[[Fichero leído correctamente. Se han encontrado: " << sincros << " sincronizaciones.]]" << endl;
     }else{
         cout << "[[Error leyendo el archivo de configuracion: " << fichero << " con error "<< correcto << "]]" << endl;
+        exit(2);
     }
     
     
@@ -353,7 +355,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 strcpy(temp, c2);
                 strcat(temp, "/");
                 strcat(temp, archivos2[j]);
-                //eliminarFichero(temp);
+                eliminarFichero(temp);
                 cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
                 delete [] temp;
                 j++;
@@ -391,7 +393,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             strcpy(temp, c2);
             strcat(temp, "/");
             strcat(temp, archivos2[j]);
-            //eliminarFichero(temp);
+            eliminarFichero(temp);
             cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
             delete [] temp;
             j++;

@@ -12,6 +12,6 @@ void mostrarSincronizaciones(Sincronizacion &sinc);                             
 void ejecutarSincronizaciones(Sincronizacion &sinc);
 void ejecutarSincronizaciones(char *c1, char *c2, Sincronizacion &sinc);
 void ayuda();                                               //Listo
-Sincronizacion cargarFicheroCfg(char *ubic, Sincronizacion &sinc);                          //Listo
+bool cargarFicheroCfg(char *ubic, Sincronizacion &sinc);                          //Listo
 void anadirSincronizacion(char *c1, char *c2, int opt, Sincronizacion &sinc);   //Listo
 void borrarSincronizacion(char *c1, char *c2, Sincronizacion &sinc);              //Listo
