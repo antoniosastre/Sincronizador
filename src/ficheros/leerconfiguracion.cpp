@@ -14,7 +14,6 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     ifstream fe;
     int sincs;
     char buffer[MAX_FICHERO_CONFIG_LINE_SIZE+1];
-    //char** aux;
     
     
     fe.open(fichero);
@@ -28,27 +27,50 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     carpetas2 = new char *[sincs];
     tipos = new int [sincs];
     
+    int control;
+    
     for (int i=0; i<sincs; i++) {
         
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
-        fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         
-        carpetas1[i] = new char [strlen(buffer)+1];
-        strcpy(carpetas1[i], buffer);
+        control = atoi(buffer);
         
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
+        
+        if (control == strlen(buffer)) {
+            carpetas1[i] = new char [strlen(buffer)+1];
+            strcpy(carpetas1[i], buffer);
+        }else{
+            cout << "[[Archivo de configuración CORRUPTO]]" << endl;
+        }
+        
+        
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         
-        carpetas2[i] = new char [strlen(buffer)+1];
-        strcpy(carpetas2[i], buffer);
+        control = atoi(buffer);
         
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
+        
+        if (control == strlen(buffer)) {
+            carpetas2[i] = new char [strlen(buffer)+1];
+            strcpy(carpetas2[i], buffer);
+        }else{
+            cout << "[[Archivo de configuración CORRUPTO]]" << endl;
+        }
+
+        
+        fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
+        
         tipos[i] = atoi(buffer);
+        
+        if (atoi(buffer) != 1 && atoi(buffer) != 2) {
+            cout << "[[Archivo de configuración CORRUPTO]]" << endl;
+        }
+        
         
     }
     
     n=sincs;
-    
     
     fe.close();
     
