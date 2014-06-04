@@ -17,6 +17,7 @@ Sincronizacion :: Sincronizacion(){
     carpetas2=new char*[0];
     tipos=new int[0];
     sincros=0;
+    error=0;
     
 }
 
@@ -31,6 +32,7 @@ Sincronizacion :: Sincronizacion(const char* fichero){
     cout << "[[Fichero leído correctamente. Se han encontrado: " << sincros << " sincronizaciones.]]" << endl;
     }else{
         cout << "[[Error leyendo el archivo de configuracion: " << fichero << " con error "<< correcto << "]]" << endl;
+        exit(2);
     }
     
     
@@ -353,13 +355,41 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 strcpy(temp, c2);
                 strcat(temp, "/");
                 strcat(temp, archivos2[j]);
-                //eliminarFichero(temp);
+                eliminarFichero(temp);
                 cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
                 delete [] temp;
                 j++;
                 
             }else if (strcmp(archivos1[i],archivos2[j])==0){
-                cout << "Se respeta el archivo " << archivos1[i] << endl;
+                cout << "Se actualiza el archivo " << archivos1[i] << endl;
+                
+                char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                
+                strcpy(temp1, c1);
+                strcat(temp1, "/");
+                strcat(temp1, archivos1[i]);
+                
+                strcpy(temp2, c2);
+                strcat(temp2, "/");
+                strcat(temp2, archivos1[i]);
+                
+                cout << temp1 << endl;
+                cout << temp2 << endl;
+                
+                if (esFichero(temp1) && esFichero(temp2)){
+                    cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
+                    if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                    }
+                }
+                
+                delete [] temp1;
+                delete [] temp2;
+                
                 i++;
                 j++;
             }
@@ -391,7 +421,7 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
             strcpy(temp, c2);
             strcat(temp, "/");
             strcat(temp, archivos2[j]);
-            //eliminarFichero(temp);
+            eliminarFichero(temp);
             cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
             delete [] temp;
             j++;

@@ -25,11 +25,12 @@ public:
     void ejecutar(char *c1, char *c2);
     ~Sincronizacion();
     Sincronizacion & operator=(const Sincronizacion &sinc);
+    int sincros;
+    int error;
     
 private:
     
     char *fichero;
-    int sincros;
     char **carpetas1;
     char **carpetas2;
     int *tipos;

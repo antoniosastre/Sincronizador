@@ -6,11 +6,6 @@
 
 using namespace std;
 
-
-
-
-
-
 int ultimaModificacion(char *archivo) {
 
 	struct stat _buf;
