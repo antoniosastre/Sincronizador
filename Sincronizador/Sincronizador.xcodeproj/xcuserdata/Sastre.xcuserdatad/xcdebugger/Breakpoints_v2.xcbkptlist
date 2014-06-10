@@ -62,9 +62,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "Sincronizacion :: Sincronizacion(const char* fichero)"
-            landmarkType = "5">
+            endingLineNumber = "23">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -184,9 +182,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "Sincronizacion :: ~Sincronizacion()"
-            landmarkType = "5">
+            endingLineNumber = "40">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
