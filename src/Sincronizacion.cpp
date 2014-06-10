@@ -342,8 +342,17 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 strcat(temp2, "/");
                 strcat(temp2, archivos1[i]);
                 
+                if (esFichero(temp1)==0) {
+                    
                 copiarFichero(temp1, temp2);
                 cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                    
+                }else{
+                    crearCarpeta(temp2);
+                    ejecutar(temp1, temp2, opt);
+                   cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl; 
+                }
+                
                 delete [] temp1;
                 delete [] temp2;
                 i++;

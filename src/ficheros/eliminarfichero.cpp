@@ -1,5 +1,5 @@
+#include <cstdio>
+
 bool eliminarFichero(const char *fichero){
-    
-    
-    return false;
+    return std::remove(fichero)==0;
 }
