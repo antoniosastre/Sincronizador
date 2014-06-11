@@ -324,6 +324,12 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
     error1 = getCarpeta(c1, archivos1, nf1);
     error2 = getCarpeta(c2, archivos2, nf2);
     
+    //---------------------
+    //
+    //Sincronización tipo 1
+    //
+    //---------------------
+    
     if (opt == 1) {
         int i=0;
         int j=0;
@@ -400,13 +406,13 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 cout << temp2 << endl;
                 
                 if (esFichero(temp1)==1 && esFichero(temp2)==1){
-                    cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
-                    if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                   // cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
+                  //  if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
                         
                         copiarFichero(temp1, temp2);
                         cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
                         
-                    }
+                 //   }
                 }else if(esFichero(temp1)==0 && esFichero(temp2)==0){
                     
                     ejecutar(temp1, temp2, opt);
@@ -478,6 +484,175 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
         }
         
     }else if(opt == 2){
+       
+        //---------------------------------------------------
+        //
+        //Sincronización tipo 2
+        //
+        //---------------------------------------------------
+        
+        
+        int i=0;
+        int j=0;
+        
+        while (i < nf1 || j < nf2) {
+            
+            if (i < nf1 && j < nf2) {
+                
+                if (strcmp(archivos1[i],archivos2[j])<0) {
+                    char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                    char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                    
+                    strcpy(temp1, c1);
+                    strcat(temp1, "/");
+                    strcat(temp1, archivos1[i]);
+                    
+                    strcpy(temp2, c2);
+                    strcat(temp2, "/");
+                    strcat(temp2, archivos1[i]);
+                    
+                    cout << "El archivo " << temp1 << " para la función es fichero da: " << esFichero(temp1) << endl;
+                    
+                    if (esFichero(temp1)==1) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                    }else{
+                        crearCarpeta(temp2);
+                        ejecutar(temp1, temp2, opt);
+                        cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl;
+                    }
+                    
+                    delete [] temp1;
+                    delete [] temp2;
+                    i++;
+                    
+                }else if (strcmp(archivos1[i],archivos2[j])>0){
+                    char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                    char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                    
+                    strcpy(temp1, c1);
+                    strcat(temp1, "/");
+                    strcat(temp1, archivos2[i]);
+                    
+                    strcpy(temp2, c2);
+                    strcat(temp2, "/");
+                    strcat(temp2, archivos2[i]);
+                    
+                    cout << "El archivo " << temp1 << " para la función es fichero da: " << esFichero(temp1) << endl;
+                    
+                    if (esFichero(temp2)==1) {
+                        
+                        copiarFichero(temp2, temp1);
+                        cout << "Se copia el fichero " << temp2 << " en " << temp1 << endl;
+                        
+                    }else{
+                        crearCarpeta(temp2);
+                        ejecutar(temp2, temp1, opt);
+                        cout << "Se copia la carpeta " << temp2 << " en " << temp1 << endl;
+                    }
+                    
+                    delete [] temp1;
+                    delete [] temp2;
+                    j++;
+                    
+                }else if (strcmp(archivos1[i],archivos2[j])==0){
+                    cout << "Se actualiza el archivo " << archivos1[i] << endl;
+                    
+                    char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                    char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                    
+                    strcpy(temp1, c1);
+                    strcat(temp1, "/");
+                    strcat(temp1, archivos1[i]);
+                    
+                    strcpy(temp2, c2);
+                    strcat(temp2, "/");
+                    strcat(temp2, archivos1[i]);
+                    
+                    cout << temp1 << endl;
+                    cout << temp2 << endl;
+                    
+                    if (esFichero(temp1)==1 && esFichero(temp2)==1){
+                        // cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
+                        //  if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                        //   }
+                    }else if(esFichero(temp1)==0 && esFichero(temp2)==0){
+                        
+                        ejecutar(temp1, temp2, opt);
+                        
+                    }
+                    
+                    delete [] temp1;
+                    delete [] temp2;
+                    
+                    i++;
+                    j++;
+                }
+                
+                
+            }else if (i < nf1){
+                
+                char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                
+                strcpy(temp1, c1);
+                strcat(temp1, "/");
+                strcat(temp1, archivos1[i]);
+                
+                strcpy(temp2, c2);
+                strcat(temp2, "/");
+                strcat(temp2, archivos1[i]);
+                
+                cout << "El archivo " << temp1 << " para la función es fichero da: " << esFichero(temp1) << endl;
+                
+                if (esFichero(temp1)==1) {
+                    
+                    copiarFichero(temp1, temp2);
+                    cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                    
+                }else{
+                    crearCarpeta(temp2);
+                    ejecutar(temp1, temp2, opt);
+                    cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl;
+                }
+                delete [] temp1;
+                delete [] temp2;
+                i++;
+                
+                
+            }else if (j < nf2){
+                
+                char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
+                strcpy(temp, c2);
+                strcat(temp, "/");
+                strcat(temp, archivos2[j]);
+                if (esFichero(temp)==1) {
+                    
+                    eliminarFichero(temp);
+                    cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
+                    
+                }else{
+                    char vacia[6] = "vacia";
+                    crearCarpeta(vacia);
+                    ejecutar(vacia, temp, opt);
+                    eliminarCarpeta(temp);
+                    eliminarCarpeta(vacia);
+                }
+                
+                delete [] temp;
+                j++;
+                
+            }
+            
+        }
+
+        
         
         
     }

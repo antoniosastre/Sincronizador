@@ -7,18 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA298C531947594B00A8EFE5 /* libficheros.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA298C521947594B00A8EFE5 /* libficheros.a */; };
 		CA4B8F0619361CB800DFF88B /* Sincronizador.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CA4B8F0519361CB800DFF88B /* Sincronizador.1 */; };
-		CA4B8F2119361CDA00DFF88B /* compararficheros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1319361CDA00DFF88B /* compararficheros.cpp */; };
-		CA4B8F2219361CDA00DFF88B /* copiarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1419361CDA00DFF88B /* copiarfichero.cpp */; };
-		CA4B8F2319361CDA00DFF88B /* crearcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1519361CDA00DFF88B /* crearcarpeta.cpp */; };
-		CA4B8F2419361CDA00DFF88B /* eliminarcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1619361CDA00DFF88B /* eliminarcarpeta.cpp */; };
-		CA4B8F2519361CDA00DFF88B /* eliminarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1719361CDA00DFF88B /* eliminarfichero.cpp */; };
-		CA4B8F2619361CDA00DFF88B /* esfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1819361CDA00DFF88B /* esfichero.cpp */; };
-		CA4B8F2719361CDA00DFF88B /* getcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1919361CDA00DFF88B /* getcarpeta.cpp */; };
-		CA4B8F2819361CDA00DFF88B /* guardarconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1A19361CDA00DFF88B /* guardarconfiguracion.cpp */; };
-		CA4B8F2919361CDA00DFF88B /* leerconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1B19361CDA00DFF88B /* leerconfiguracion.cpp */; };
-		CA4B8F2A19361CDA00DFF88B /* tamfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1C19361CDA00DFF88B /* tamfichero.cpp */; };
-		CA4B8F2B19361CDA00DFF88B /* ultimamodificacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1D19361CDA00DFF88B /* ultimamodificacion.cpp */; };
 		CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1E19361CDA00DFF88B /* funciones.cpp */; };
 		CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1F19361CDA00DFF88B /* main.cpp */; };
 		CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */; };
@@ -38,23 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA298C521947594B00A8EFE5 /* libficheros.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libficheros.a; sourceTree = "<group>"; };
 		CA4B8F0019361CB800DFF88B /* Sincronizador */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sincronizador; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B8F0519361CB800DFF88B /* Sincronizador.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sincronizador.1; sourceTree = "<group>"; };
 		CA4B8F0C19361CDA00DFF88B /* config.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.cfg; path = ../config.cfg; sourceTree = "<group>"; };
 		CA4B8F0E19361CDA00DFF88B /* ficheros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ficheros.h; sourceTree = "<group>"; };
 		CA4B8F0F19361CDA00DFF88B /* funciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
 		CA4B8F1019361CDA00DFF88B /* Sincronizacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sincronizacion.h; sourceTree = "<group>"; };
-		CA4B8F1319361CDA00DFF88B /* compararficheros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compararficheros.cpp; sourceTree = "<group>"; };
-		CA4B8F1419361CDA00DFF88B /* copiarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = copiarfichero.cpp; sourceTree = "<group>"; };
-		CA4B8F1519361CDA00DFF88B /* crearcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crearcarpeta.cpp; sourceTree = "<group>"; };
-		CA4B8F1619361CDA00DFF88B /* eliminarcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarcarpeta.cpp; sourceTree = "<group>"; };
-		CA4B8F1719361CDA00DFF88B /* eliminarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarfichero.cpp; sourceTree = "<group>"; };
-		CA4B8F1819361CDA00DFF88B /* esfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = esfichero.cpp; sourceTree = "<group>"; };
-		CA4B8F1919361CDA00DFF88B /* getcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getcarpeta.cpp; sourceTree = "<group>"; };
-		CA4B8F1A19361CDA00DFF88B /* guardarconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guardarconfiguracion.cpp; sourceTree = "<group>"; };
-		CA4B8F1B19361CDA00DFF88B /* leerconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leerconfiguracion.cpp; sourceTree = "<group>"; };
-		CA4B8F1C19361CDA00DFF88B /* tamfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tamfichero.cpp; sourceTree = "<group>"; };
-		CA4B8F1D19361CDA00DFF88B /* ultimamodificacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ultimamodificacion.cpp; sourceTree = "<group>"; };
 		CA4B8F1E19361CDA00DFF88B /* funciones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = funciones.cpp; sourceTree = "<group>"; };
 		CA4B8F1F19361CDA00DFF88B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sincronizacion.cpp; sourceTree = "<group>"; };
@@ -65,15 +45,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA298C531947594B00A8EFE5 /* libficheros.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA298C511947594B00A8EFE5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CA298C521947594B00A8EFE5 /* libficheros.a */,
+			);
+			name = lib;
+			path = ../lib;
+			sourceTree = "<group>";
+		};
 		CA4B8EF719361CB800DFF88B = {
 			isa = PBXGroup;
 			children = (
+				CA298C511947594B00A8EFE5 /* lib */,
 				CA4B8F0C19361CDA00DFF88B /* config.cfg */,
 				CA4B8F0D19361CDA00DFF88B /* include */,
 				CA4B8F1119361CDA00DFF88B /* src */,
@@ -112,31 +103,12 @@
 		CA4B8F1119361CDA00DFF88B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CA4B8F1219361CDA00DFF88B /* ficheros */,
 				CA4B8F1E19361CDA00DFF88B /* funciones.cpp */,
 				CA4B8F1F19361CDA00DFF88B /* main.cpp */,
 				CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */,
 			);
 			name = src;
 			path = ../src;
-			sourceTree = "<group>";
-		};
-		CA4B8F1219361CDA00DFF88B /* ficheros */ = {
-			isa = PBXGroup;
-			children = (
-				CA4B8F1319361CDA00DFF88B /* compararficheros.cpp */,
-				CA4B8F1419361CDA00DFF88B /* copiarfichero.cpp */,
-				CA4B8F1519361CDA00DFF88B /* crearcarpeta.cpp */,
-				CA4B8F1619361CDA00DFF88B /* eliminarcarpeta.cpp */,
-				CA4B8F1719361CDA00DFF88B /* eliminarfichero.cpp */,
-				CA4B8F1819361CDA00DFF88B /* esfichero.cpp */,
-				CA4B8F1919361CDA00DFF88B /* getcarpeta.cpp */,
-				CA4B8F1A19361CDA00DFF88B /* guardarconfiguracion.cpp */,
-				CA4B8F1B19361CDA00DFF88B /* leerconfiguracion.cpp */,
-				CA4B8F1C19361CDA00DFF88B /* tamfichero.cpp */,
-				CA4B8F1D19361CDA00DFF88B /* ultimamodificacion.cpp */,
-			);
-			path = ficheros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,19 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */,
-				CA4B8F2919361CDA00DFF88B /* leerconfiguracion.cpp in Sources */,
-				CA4B8F2719361CDA00DFF88B /* getcarpeta.cpp in Sources */,
-				CA4B8F2519361CDA00DFF88B /* eliminarfichero.cpp in Sources */,
-				CA4B8F2219361CDA00DFF88B /* copiarfichero.cpp in Sources */,
-				CA4B8F2419361CDA00DFF88B /* eliminarcarpeta.cpp in Sources */,
 				CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */,
-				CA4B8F2B19361CDA00DFF88B /* ultimamodificacion.cpp in Sources */,
-				CA4B8F2319361CDA00DFF88B /* crearcarpeta.cpp in Sources */,
-				CA4B8F2619361CDA00DFF88B /* esfichero.cpp in Sources */,
-				CA4B8F2819361CDA00DFF88B /* guardarconfiguracion.cpp in Sources */,
 				CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */,
-				CA4B8F2119361CDA00DFF88B /* compararficheros.cpp in Sources */,
-				CA4B8F2A19361CDA00DFF88B /* tamfichero.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +244,11 @@
 		CA4B8F0A19361CB800DFF88B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+					/Users/Sastre/GitHub/Sincronizador/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -290,6 +256,11 @@
 		CA4B8F0B19361CB800DFF88B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+					/Users/Sastre/GitHub/Sincronizador/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -313,6 +284,7 @@
 				CA4B8F0B19361CB800DFF88B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
