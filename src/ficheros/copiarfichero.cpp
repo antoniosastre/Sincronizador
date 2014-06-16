@@ -9,7 +9,7 @@ using namespace std;
 
 
 bool copiarFichero(const char *origen, const char *destino){
-
+    
     ifstream ifile(origen);
     ofstream ofile(destino);
     char carac;

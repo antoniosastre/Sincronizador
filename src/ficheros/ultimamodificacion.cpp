@@ -7,7 +7,7 @@
 using namespace std;
 
 int ultimaModificacion(char *archivo) {
-
+    
 	struct stat _buf;
 	stat(archivo, &_buf);
 	return (int) _buf.st_mtime/100;

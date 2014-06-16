@@ -15,15 +15,15 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]){
-
+    
     int cflag = 0;
     bool mostrarAyuda = false;
     Sincronizacion sinc;
-
+    
     if (argc<=1) {
         mostrarAyuda = true;
     }else{
-    
+        
         for (int i=1; i<argc; i++) {
             if (argv[i][0] == '-' && argv[i][1] == 'h') {
                 mostrarAyuda = true;
@@ -62,29 +62,13 @@ int main(int argc, const char * argv[]){
                 }else{
                     mostrarAyuda = true;
                 }
-                
-                
-            }else if(cflag==1 && argv[i][0] == '-' && argv[i][1] == 'l'){
-
-                    mostrarSincronizaciones(sinc);
-           
-            }else if(argv[i][0] == '-' && argv[i][1] == 's'){
-                
-                if (cflag==1 && i+2<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-'){
-                    char *c1 = (char *)argv[++i];
-                    char *c2 = (char *)argv[++i];
-                    ejecutarSincronizaciones(c1, c2, sinc);
-                    
-                }else if(cflag==1){
+            }
+        }
         
-                    ejecutarSincronizaciones(sinc);
-                
-                }else{
-                   mostrarAyuda = true;
-                }
-
-                
-            }else if(argv[i][0] == '-' && argv[i][1] == 'r'){
+        
+        for (int i=1; i<argc; i++) {
+            
+            if(argv[i][0] == '-' && argv[i][1] == 'r'){
                 
                 
                 if (cflag==1 && i+2<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-'){
@@ -99,7 +83,41 @@ int main(int argc, const char * argv[]){
             }
             
         }
- 
+        
+        
+        
+        for (int i=1; i<argc; i++) {
+            
+            if(cflag==1 && argv[i][0] == '-' && argv[i][1] == 'l'){
+                
+                mostrarSincronizaciones(sinc);
+                
+            }
+        }
+        
+        
+        for (int i=1; i<argc; i++) {
+            
+            if(argv[i][0] == '-' && argv[i][1] == 's'){
+                
+                if (cflag==1 && i+2<argc && argv[i+1][0] != '-' && argv[i+2][0] != '-'){
+                    char *c1 = (char *)argv[++i];
+                    char *c2 = (char *)argv[++i];
+                    ejecutarSincronizaciones(c1, c2, sinc);
+                    
+                }else if(cflag==1){
+                    
+                    ejecutarSincronizaciones(sinc);
+                    
+                }else{
+                    mostrarAyuda = true;
+                }
+                
+            }
+            
+        }
+        
+        
     }
     
     if (mostrarAyuda) ayuda();

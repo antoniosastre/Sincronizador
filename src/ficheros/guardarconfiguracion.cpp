@@ -10,13 +10,13 @@ int GuardarConfiguracion(const char *fichero, char **carpetas1, char **carpetas2
     
     std::ofstream fs(fichero);
     
-//    fs.open(fichero);
+    //    fs.open(fichero);
     if (!fs.good()) {
         cerr << "ERROR: No se pudo abrir para escritura " << fichero << endl;
         return -1;
     }
     
-
+    
     
     
     fs << n << endl;
@@ -33,9 +33,9 @@ int GuardarConfiguracion(const char *fichero, char **carpetas1, char **carpetas2
         
     }
     
-
+    
     fs.close();
-
+    
     
     
     return 0;

@@ -29,7 +29,7 @@ Sincronizacion :: Sincronizacion(const char* fichero){
     correcto = LeerConfiguracion(this->fichero, carpetas1, carpetas2, tipos, sincros);
     
     if (correcto == 0){
-    cout << "[[Fichero leído correctamente. Se han encontrado: " << sincros << " sincronizaciones.]]" << endl;
+        cout << "[[Fichero leído correctamente. Se han encontrado: " << sincros << " sincronizaciones.]]" << endl;
     }else{
         cout << "[[Error leyendo el archivo de configuracion: " << fichero << " con error "<< correcto << "]]" << endl;
         exit(2);
@@ -44,12 +44,12 @@ Sincronizacion :: ~Sincronizacion(){
     for (int i = sincros-1; i>=0; i--) {
         delete [] carpetas1[i];
         delete [] carpetas2[i];
-   }
+    }
     
     delete [] carpetas1;
     delete [] carpetas2;
     
-   delete [] tipos;
+    delete [] tipos;
     delete [] fichero;
     
 }
@@ -61,7 +61,7 @@ Sincronizacion & Sincronizacion :: operator=(const Sincronizacion &sinc){
     this->tipos = new int[sinc.sincros];
     this->fichero = new char[strlen(sinc.fichero)+1];
     
-     strcpy(this->fichero, sinc.fichero);
+    strcpy(this->fichero, sinc.fichero);
     this->sincros = sinc.sincros;
     
     for (int i=0; i<sinc.sincros ; i++) {
@@ -72,9 +72,9 @@ Sincronizacion & Sincronizacion :: operator=(const Sincronizacion &sinc){
         this->tipos[i] = sinc.tipos[i];
     }
     
-   
     
-return *this;
+    
+    return *this;
 }
 
 
@@ -107,9 +107,9 @@ void Sincronizacion::insertar(char *c1, char *c2, int opt){
     
     for (int i=0 ; i < sincros; i++) {
         
-            if (strcmp(c1,carpetas1[i]) == 0 && strcmp(c2,carpetas2[i]) == 0) {
-                existe = true;
-            }
+        if (strcmp(c1,carpetas1[i]) == 0 && strcmp(c2,carpetas2[i]) == 0) {
+            existe = true;
+        }
         
     }
     
@@ -123,13 +123,13 @@ void Sincronizacion::insertar(char *c1, char *c2, int opt){
         ncarpetas2= new char *[(sincros+1)];
         
         int * ntipos= new int[sincros+1];
-
+        
         
         for (int i = 0; i<sincros; i++) {
             ncarpetas1[i] = new char[strlen(carpetas1[i])+1];
             strcpy(ncarpetas1[i], carpetas1[i]);
         }
-
+        
         
         for (int i = 0; i<sincros; i++) {
             ncarpetas2[i] = new char[strlen(carpetas2[i])+1];
@@ -159,7 +159,7 @@ void Sincronizacion::insertar(char *c1, char *c2, int opt){
         
         delete [] carpetas1;
         delete [] ncarpetas1;
-
+        
         
         for (int i = sincros-1; i>=0; i--) {
             delete [] carpetas2[i];
@@ -200,10 +200,10 @@ void Sincronizacion::eliminar(char *c1, char *c2){
     
     for (int i=0 ; i < sincros; i++) {
         
-            if (strcmp(c1,carpetas1[i]) == 0 && strcmp(c2,carpetas2[i]) == 0) {
-                existe = true;
-                posicion = i;
-            }
+        if (strcmp(c1,carpetas1[i]) == 0 && strcmp(c2,carpetas2[i]) == 0) {
+            existe = true;
+            posicion = i;
+        }
         
     }
     
@@ -220,21 +220,21 @@ void Sincronizacion::eliminar(char *c1, char *c2){
         
         int j = 0;
         for (int i = 0; i<sincros; i++) {
-           
+            
             if (i!=posicion){
-            ncarpetas1[j] = new char[strlen(carpetas1[i])+1];
-            strcpy(ncarpetas1[j], carpetas1[i]);
+                ncarpetas1[j] = new char[strlen(carpetas1[i])+1];
+                strcpy(ncarpetas1[j], carpetas1[i]);
                 j++;
             }
-    
+            
         }
         
         j=0;
         for (int i = 0; i<sincros; i++) {
             
             if (i!=posicion){
-            ncarpetas2[j] = new char[strlen(carpetas2[i])+1];
-            strcpy(ncarpetas2[j], carpetas2[i]);
+                ncarpetas2[j] = new char[strlen(carpetas2[i])+1];
+                strcpy(ncarpetas2[j], carpetas2[i]);
                 j++;
             }
         }
@@ -243,7 +243,7 @@ void Sincronizacion::eliminar(char *c1, char *c2){
         for (int i = 0; i<sincros; i++) {
             
             if (i!=posicion){
-            ntipos[j]= tipos[i];
+                ntipos[j]= tipos[i];
                 j++;
             }
         }
@@ -335,10 +335,100 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
         int j=0;
         
         while (i < nf1 || j < nf2) {
-    
-        if (i < nf1 && j < nf2) {
-        
-            if (strcmp(archivos1[i],archivos2[j])<0) {
+            
+            if (i < nf1 && j < nf2) {
+                
+                if (strcmp(archivos1[i],archivos2[j])<0) {
+                    char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                    char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                    
+                    strcpy(temp1, c1);
+                    strcat(temp1, "/");
+                    strcat(temp1, archivos1[i]);
+                    
+                    strcpy(temp2, c2);
+                    strcat(temp2, "/");
+                    strcat(temp2, archivos1[i]);
+                    
+                    cout << "El archivo " << temp1 << " para la función es fichero da: " << esFichero(temp1) << endl;
+                    
+                    if (esFichero(temp1)==1) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                    }else{
+                        crearCarpeta(temp2);
+                        ejecutar(temp1, temp2, opt);
+                        cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl;
+                    }
+                    
+                    delete [] temp1;
+                    delete [] temp2;
+                    i++;
+                    
+                }else if (strcmp(archivos1[i],archivos2[j])>0){
+                    char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
+                    strcpy(temp, c2);
+                    strcat(temp, "/");
+                    strcat(temp, archivos2[j]);
+                    
+                    if (esFichero(temp)==1) {
+                        
+                        eliminarFichero(temp);
+                        cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
+                        
+                    }else{
+                        char vacia[6]="vacia";
+                        crearCarpeta(vacia);
+                        ejecutar(vacia, temp, opt);
+                        eliminarCarpeta(temp);
+                        eliminarCarpeta(vacia);
+                    }
+                    delete [] temp;
+                    j++;
+                    
+                }else if (strcmp(archivos1[i],archivos2[j])==0){
+                    cout << "Se actualiza el archivo " << archivos1[i] << endl;
+                    
+                    char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
+                    char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
+                    
+                    strcpy(temp1, c1);
+                    strcat(temp1, "/");
+                    strcat(temp1, archivos1[i]);
+                    
+                    strcpy(temp2, c2);
+                    strcat(temp2, "/");
+                    strcat(temp2, archivos1[i]);
+                    
+                    cout << temp1 << endl;
+                    cout << temp2 << endl;
+                    
+                    if (esFichero(temp1)==1 && esFichero(temp2)==1){
+                        // cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
+                        //  if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                        
+                        copiarFichero(temp1, temp2);
+                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                        
+                        //   }
+                    }else if(esFichero(temp1)==0 && esFichero(temp2)==0){
+                        
+                        ejecutar(temp1, temp2, opt);
+                        
+                    }
+                    
+                    delete [] temp1;
+                    delete [] temp2;
+                    
+                    i++;
+                    j++;
+                }
+                
+                
+            }else if (i < nf1){
+                
                 char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
                 char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
                 
@@ -354,137 +444,47 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 
                 if (esFichero(temp1)==1) {
                     
-                copiarFichero(temp1, temp2);
-                cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                    copiarFichero(temp1, temp2);
+                    cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
                     
                 }else{
                     crearCarpeta(temp2);
                     ejecutar(temp1, temp2, opt);
-                   cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl; 
+                    cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl;
                 }
-                
                 delete [] temp1;
                 delete [] temp2;
                 i++;
                 
-            }else if (strcmp(archivos1[i],archivos2[j])>0){
+                
+            }else if (j < nf2){
+                
                 char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
                 strcpy(temp, c2);
                 strcat(temp, "/");
                 strcat(temp, archivos2[j]);
-                
                 if (esFichero(temp)==1) {
-                
-                eliminarFichero(temp);
-                cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
+                    
+                    eliminarFichero(temp);
+                    cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
                     
                 }else{
-                    char vacia[6]="vacia";
+                    char vacia[6] = "vacia";
                     crearCarpeta(vacia);
                     ejecutar(vacia, temp, opt);
                     eliminarCarpeta(temp);
                     eliminarCarpeta(vacia);
                 }
+                
                 delete [] temp;
                 j++;
                 
-            }else if (strcmp(archivos1[i],archivos2[j])==0){
-                cout << "Se actualiza el archivo " << archivos1[i] << endl;
-                
-                char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
-                char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
-                
-                strcpy(temp1, c1);
-                strcat(temp1, "/");
-                strcat(temp1, archivos1[i]);
-                
-                strcpy(temp2, c2);
-                strcat(temp2, "/");
-                strcat(temp2, archivos1[i]);
-                
-                cout << temp1 << endl;
-                cout << temp2 << endl;
-                
-                if (esFichero(temp1)==1 && esFichero(temp2)==1){
-                   // cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
-                  //  if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
-                        
-                        copiarFichero(temp1, temp2);
-                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
-                        
-                 //   }
-                }else if(esFichero(temp1)==0 && esFichero(temp2)==0){
-                    
-                    ejecutar(temp1, temp2, opt);
-                    
-                }
-                
-                delete [] temp1;
-                delete [] temp2;
-                
-                i++;
-                j++;
             }
-            
-            
-        }else if (i < nf1){
-            
-            char* temp1 = new char[strlen(c1)+strlen(archivos1[i])+2];
-            char* temp2 = new char[strlen(c2)+strlen(archivos1[i])+2];
-            
-            strcpy(temp1, c1);
-            strcat(temp1, "/");
-            strcat(temp1, archivos1[i]);
-            
-            strcpy(temp2, c2);
-            strcat(temp2, "/");
-            strcat(temp2, archivos1[i]);
-            
-            cout << "El archivo " << temp1 << " para la función es fichero da: " << esFichero(temp1) << endl;
-            
-            if (esFichero(temp1)==1) {
-                
-                copiarFichero(temp1, temp2);
-                cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
-                
-            }else{
-                crearCarpeta(temp2);
-                ejecutar(temp1, temp2, opt);
-                cout << "Se copia la carpeta " << temp1 << " en " << temp2 << endl;
-            }
-            delete [] temp1;
-            delete [] temp2;
-            i++;
-            
-            
-        }else if (j < nf2){
-            
-            char* temp = new char[strlen(c2)+strlen(archivos2[j])+2];
-            strcpy(temp, c2);
-            strcat(temp, "/");
-            strcat(temp, archivos2[j]);
-            if (esFichero(temp)==1) {
-                
-                eliminarFichero(temp);
-                cout << "Se elimina el fichero " << temp << " de " << c2 << endl;
-                
-            }else{
-                char vacia[6] = "vacia";
-                crearCarpeta(vacia);
-                ejecutar(vacia, temp, opt);
-                eliminarCarpeta(temp);
-                eliminarCarpeta(vacia);
-            }
-
-            delete [] temp;
-            j++;
-            
-        }
             
         }
         
     }else if(opt == 2){
-       
+        
         //---------------------------------------------------
         //
         //Sincronización tipo 2
@@ -575,17 +575,17 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                     
                     if (esFichero(temp1)==1 && esFichero(temp2)==1){
                         // cout << "Son dos ficheros: " << ultimaModificacion(temp1) << " - " << ultimaModificacion(temp2) << endl;
-                          if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
-                        
-                        copiarFichero(temp1, temp2);
-                        cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
-                        
-                          }else{
-                              
-                              copiarFichero(temp2, temp1);
-                              cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
-                              
-                          }
+                        if (ultimaModificacion(temp1)>ultimaModificacion(temp2)) {
+                            
+                            copiarFichero(temp1, temp2);
+                            cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                            
+                        }else{
+                            
+                            copiarFichero(temp2, temp1);
+                            cout << "Se copia el fichero " << temp1 << " en " << temp2 << endl;
+                            
+                        }
                     }else if(esFichero(temp1)==0 && esFichero(temp2)==0){
                         
                         ejecutar(temp1, temp2, opt);
@@ -655,13 +655,13 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
                 }
                 delete [] temp1;
                 delete [] temp2;
-
+                
                 j++;
                 
             }
             
         }
-
+        
         
         
         

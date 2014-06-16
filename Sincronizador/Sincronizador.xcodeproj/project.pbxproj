@@ -12,6 +12,17 @@
 		CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1E19361CDA00DFF88B /* funciones.cpp */; };
 		CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1F19361CDA00DFF88B /* main.cpp */; };
 		CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */; };
+		FF1CE6F3194F0F57007CA1DF /* compararficheros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */; };
+		FF1CE6F4194F0F57007CA1DF /* copiarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */; };
+		FF1CE6F5194F0F57007CA1DF /* crearcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */; };
+		FF1CE6F6194F0F57007CA1DF /* eliminarcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */; };
+		FF1CE6F7194F0F57007CA1DF /* eliminarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */; };
+		FF1CE6F8194F0F57007CA1DF /* esfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */; };
+		FF1CE6F9194F0F57007CA1DF /* getcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */; };
+		FF1CE6FA194F0F57007CA1DF /* guardarconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */; };
+		FF1CE6FB194F0F57007CA1DF /* leerconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */; };
+		FF1CE6FC194F0F57007CA1DF /* tamfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */; };
+		FF1CE6FD194F0F57007CA1DF /* ultimamodificacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +49,17 @@
 		CA4B8F1E19361CDA00DFF88B /* funciones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = funciones.cpp; sourceTree = "<group>"; };
 		CA4B8F1F19361CDA00DFF88B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sincronizacion.cpp; sourceTree = "<group>"; };
+		FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compararficheros.cpp; sourceTree = "<group>"; };
+		FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = copiarfichero.cpp; sourceTree = "<group>"; };
+		FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crearcarpeta.cpp; sourceTree = "<group>"; };
+		FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarcarpeta.cpp; sourceTree = "<group>"; };
+		FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarfichero.cpp; sourceTree = "<group>"; };
+		FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = esfichero.cpp; sourceTree = "<group>"; };
+		FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getcarpeta.cpp; sourceTree = "<group>"; };
+		FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guardarconfiguracion.cpp; sourceTree = "<group>"; };
+		FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leerconfiguracion.cpp; sourceTree = "<group>"; };
+		FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tamfichero.cpp; sourceTree = "<group>"; };
+		FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ultimamodificacion.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +127,29 @@
 			children = (
 				CA4B8F1E19361CDA00DFF88B /* funciones.cpp */,
 				CA4B8F1F19361CDA00DFF88B /* main.cpp */,
+				FF1CE6E7194F0F57007CA1DF /* ficheros */,
 				CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */,
 			);
 			name = src;
 			path = ../src;
+			sourceTree = "<group>";
+		};
+		FF1CE6E7194F0F57007CA1DF /* ficheros */ = {
+			isa = PBXGroup;
+			children = (
+				FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */,
+				FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */,
+				FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */,
+				FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */,
+				FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */,
+				FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */,
+				FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */,
+				FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */,
+				FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */,
+				FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */,
+				FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */,
+			);
+			path = ficheros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +204,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */,
+				FF1CE6F3194F0F57007CA1DF /* compararficheros.cpp in Sources */,
+				FF1CE6FA194F0F57007CA1DF /* guardarconfiguracion.cpp in Sources */,
+				FF1CE6F4194F0F57007CA1DF /* copiarfichero.cpp in Sources */,
+				FF1CE6FD194F0F57007CA1DF /* ultimamodificacion.cpp in Sources */,
+				FF1CE6F9194F0F57007CA1DF /* getcarpeta.cpp in Sources */,
 				CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */,
+				FF1CE6F6194F0F57007CA1DF /* eliminarcarpeta.cpp in Sources */,
+				FF1CE6F7194F0F57007CA1DF /* eliminarfichero.cpp in Sources */,
+				FF1CE6F5194F0F57007CA1DF /* crearcarpeta.cpp in Sources */,
+				FF1CE6FB194F0F57007CA1DF /* leerconfiguracion.cpp in Sources */,
+				FF1CE6F8194F0F57007CA1DF /* esfichero.cpp in Sources */,
 				CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */,
+				FF1CE6FC194F0F57007CA1DF /* tamfichero.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

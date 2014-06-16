@@ -13,7 +13,7 @@ int tamFichero(char *archivo){
     
     fe.open(archivo);
     if (!fe) return -1;
-
+    
     while (!fe.eof()) {
         fe.get();
         tam++;

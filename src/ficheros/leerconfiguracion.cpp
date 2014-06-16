@@ -20,7 +20,7 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     if (!fe)
         return -1;
     
-        fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
+    fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
     sincs = atoi(buffer);
     
     int control;
@@ -83,16 +83,16 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         
-            carpetas1[i] = new char [strlen(buffer)+1];
-            strcpy(carpetas1[i], buffer);
+        carpetas1[i] = new char [strlen(buffer)+1];
+        strcpy(carpetas1[i], buffer);
         
-    
+        
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         
-            carpetas2[i] = new char [strlen(buffer)+1];
-            strcpy(carpetas2[i], buffer);
-
+        carpetas2[i] = new char [strlen(buffer)+1];
+        strcpy(carpetas2[i], buffer);
+        
         
         fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
         
@@ -105,5 +105,5 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     fe.close();
     
     return 0;
-
+    
 }

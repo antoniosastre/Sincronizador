@@ -44,13 +44,13 @@ bool compararFicheros(const char* f1, const char* f2){
         
         if (file1.eof() && !file2.eof()){
             file1.close();
-        file2.close();
+            file2.close();
             return false;
         }
         
         if (!file1.eof() && file2.eof()){
             file1.close();
-        file2.close();
+            file2.close();
             return false;
         }
         
@@ -58,7 +58,7 @@ bool compararFicheros(const char* f1, const char* f2){
         file2.close();
         
         return true;
-
-}
-
+        
+    }
+    
 }
