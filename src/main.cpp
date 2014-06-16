@@ -13,7 +13,6 @@
 
 using namespace std;
 
-//Comentario
 
 int main(int argc, const char * argv[]){
 
