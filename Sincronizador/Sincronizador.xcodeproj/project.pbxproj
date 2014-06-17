@@ -22,7 +22,6 @@
 		FF906726194F1C3C00DCD230 /* funciones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906717194F1C3C00DCD230 /* funciones.cpp */; };
 		FF906727194F1C3C00DCD230 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906718194F1C3C00DCD230 /* main.cpp */; };
 		FF906728194F1C3C00DCD230 /* Sincronizacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906719194F1C3C00DCD230 /* Sincronizacion.cpp */; };
-		FF90672919507CAA00DCD230 /* libficheros.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF906709194F1C3C00DCD230 /* libficheros.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +43,6 @@
 		FF906705194F1C3C00DCD230 /* ficheros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ficheros.h; sourceTree = "<group>"; };
 		FF906706194F1C3C00DCD230 /* funciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
 		FF906707194F1C3C00DCD230 /* Sincronizacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sincronizacion.h; sourceTree = "<group>"; };
-		FF906709194F1C3C00DCD230 /* libficheros.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libficheros.a; sourceTree = "<group>"; };
 		FF90670C194F1C3C00DCD230 /* compararficheros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compararficheros.cpp; sourceTree = "<group>"; };
 		FF90670D194F1C3C00DCD230 /* copiarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = copiarfichero.cpp; sourceTree = "<group>"; };
 		FF90670E194F1C3C00DCD230 /* crearcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crearcarpeta.cpp; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF90672919507CAA00DCD230 /* libficheros.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				FF906704194F1C3C00DCD230 /* include */,
-				FF906708194F1C3C00DCD230 /* lib */,
 				FF90670A194F1C3C00DCD230 /* src */,
 				CA4B8F0219361CB800DFF88B /* Sincronizador */,
 				CA4B8F0119361CB800DFF88B /* Products */,
@@ -109,15 +105,6 @@
 			);
 			name = include;
 			path = ../Codigo/include;
-			sourceTree = "<group>";
-		};
-		FF906708194F1C3C00DCD230 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				FF906709194F1C3C00DCD230 /* libficheros.a */,
-			);
-			name = lib;
-			path = ../Codigo/lib;
 			sourceTree = "<group>";
 		};
 		FF90670A194F1C3C00DCD230 /* src */ = {
@@ -297,7 +284,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
-					/Users/Sastre/GitHub/Sincronizador/lib,
 					/Users/antoniosastre/GitHub/Sincronizador/Codigo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,7 +296,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
-					/Users/Sastre/GitHub/Sincronizador/lib,
 					/Users/antoniosastre/GitHub/Sincronizador/Codigo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

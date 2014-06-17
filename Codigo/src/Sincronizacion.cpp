@@ -324,6 +324,11 @@ void Sincronizacion::ejecutar(char *c1, char *c2, int opt){
     error1 = getCarpeta(c1, archivos1, nf1);
     error2 = getCarpeta(c2, archivos2, nf2);
     
+    if (error1 != 0 || error2 != 0) {
+        cout << "[[El programa no puede continuar. Alguna de las carpetas no se puede leer o escribir]]" << endl;
+        exit(2);
+    }
+    
     //---------------------
     //
     //Sincronización tipo 1

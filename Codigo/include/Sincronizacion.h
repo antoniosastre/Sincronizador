@@ -47,7 +47,6 @@ private:
     char **carpetas1;
     char **carpetas2;
     int *tipos;
-    int config;
     
     
     void ejecutar(char *c1, char *c2, int opt);
