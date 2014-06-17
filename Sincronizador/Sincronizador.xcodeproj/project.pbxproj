@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA298C531947594B00A8EFE5 /* libficheros.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA298C521947594B00A8EFE5 /* libficheros.a */; };
 		CA4B8F0619361CB800DFF88B /* Sincronizador.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CA4B8F0519361CB800DFF88B /* Sincronizador.1 */; };
-		CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1E19361CDA00DFF88B /* funciones.cpp */; };
-		CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F1F19361CDA00DFF88B /* main.cpp */; };
-		CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */; };
-		FF1CE6F3194F0F57007CA1DF /* compararficheros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */; };
-		FF1CE6F4194F0F57007CA1DF /* copiarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */; };
-		FF1CE6F5194F0F57007CA1DF /* crearcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */; };
-		FF1CE6F6194F0F57007CA1DF /* eliminarcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */; };
-		FF1CE6F7194F0F57007CA1DF /* eliminarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */; };
-		FF1CE6F8194F0F57007CA1DF /* esfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */; };
-		FF1CE6F9194F0F57007CA1DF /* getcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */; };
-		FF1CE6FA194F0F57007CA1DF /* guardarconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */; };
-		FF1CE6FB194F0F57007CA1DF /* leerconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */; };
-		FF1CE6FC194F0F57007CA1DF /* tamfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */; };
-		FF1CE6FD194F0F57007CA1DF /* ultimamodificacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */; };
+		FF90671B194F1C3C00DCD230 /* compararficheros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF90670C194F1C3C00DCD230 /* compararficheros.cpp */; };
+		FF90671C194F1C3C00DCD230 /* copiarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF90670D194F1C3C00DCD230 /* copiarfichero.cpp */; };
+		FF90671D194F1C3C00DCD230 /* crearcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF90670E194F1C3C00DCD230 /* crearcarpeta.cpp */; };
+		FF90671E194F1C3C00DCD230 /* eliminarcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF90670F194F1C3C00DCD230 /* eliminarcarpeta.cpp */; };
+		FF90671F194F1C3C00DCD230 /* eliminarfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906710194F1C3C00DCD230 /* eliminarfichero.cpp */; };
+		FF906720194F1C3C00DCD230 /* esfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906711194F1C3C00DCD230 /* esfichero.cpp */; };
+		FF906721194F1C3C00DCD230 /* getcarpeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906712194F1C3C00DCD230 /* getcarpeta.cpp */; };
+		FF906722194F1C3C00DCD230 /* guardarconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906713194F1C3C00DCD230 /* guardarconfiguracion.cpp */; };
+		FF906723194F1C3C00DCD230 /* leerconfiguracion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906714194F1C3C00DCD230 /* leerconfiguracion.cpp */; };
+		FF906724194F1C3C00DCD230 /* tamfichero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906715194F1C3C00DCD230 /* tamfichero.cpp */; };
+		FF906725194F1C3C00DCD230 /* ultimamodificacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906716194F1C3C00DCD230 /* ultimamodificacion.cpp */; };
+		FF906726194F1C3C00DCD230 /* funciones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906717194F1C3C00DCD230 /* funciones.cpp */; };
+		FF906727194F1C3C00DCD230 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906718194F1C3C00DCD230 /* main.cpp */; };
+		FF906728194F1C3C00DCD230 /* Sincronizacion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF906719194F1C3C00DCD230 /* Sincronizacion.cpp */; };
+		FF90672919507CAA00DCD230 /* libficheros.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF906709194F1C3C00DCD230 /* libficheros.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,27 +39,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CA298C521947594B00A8EFE5 /* libficheros.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libficheros.a; sourceTree = "<group>"; };
 		CA4B8F0019361CB800DFF88B /* Sincronizador */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sincronizador; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B8F0519361CB800DFF88B /* Sincronizador.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sincronizador.1; sourceTree = "<group>"; };
-		CA4B8F0C19361CDA00DFF88B /* config.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.cfg; path = ../config.cfg; sourceTree = "<group>"; };
-		CA4B8F0E19361CDA00DFF88B /* ficheros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ficheros.h; sourceTree = "<group>"; };
-		CA4B8F0F19361CDA00DFF88B /* funciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
-		CA4B8F1019361CDA00DFF88B /* Sincronizacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sincronizacion.h; sourceTree = "<group>"; };
-		CA4B8F1E19361CDA00DFF88B /* funciones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = funciones.cpp; sourceTree = "<group>"; };
-		CA4B8F1F19361CDA00DFF88B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sincronizacion.cpp; sourceTree = "<group>"; };
-		FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compararficheros.cpp; sourceTree = "<group>"; };
-		FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = copiarfichero.cpp; sourceTree = "<group>"; };
-		FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crearcarpeta.cpp; sourceTree = "<group>"; };
-		FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarcarpeta.cpp; sourceTree = "<group>"; };
-		FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarfichero.cpp; sourceTree = "<group>"; };
-		FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = esfichero.cpp; sourceTree = "<group>"; };
-		FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getcarpeta.cpp; sourceTree = "<group>"; };
-		FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guardarconfiguracion.cpp; sourceTree = "<group>"; };
-		FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leerconfiguracion.cpp; sourceTree = "<group>"; };
-		FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tamfichero.cpp; sourceTree = "<group>"; };
-		FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ultimamodificacion.cpp; sourceTree = "<group>"; };
+		FF906705194F1C3C00DCD230 /* ficheros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ficheros.h; sourceTree = "<group>"; };
+		FF906706194F1C3C00DCD230 /* funciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
+		FF906707194F1C3C00DCD230 /* Sincronizacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sincronizacion.h; sourceTree = "<group>"; };
+		FF906709194F1C3C00DCD230 /* libficheros.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libficheros.a; sourceTree = "<group>"; };
+		FF90670C194F1C3C00DCD230 /* compararficheros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compararficheros.cpp; sourceTree = "<group>"; };
+		FF90670D194F1C3C00DCD230 /* copiarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = copiarfichero.cpp; sourceTree = "<group>"; };
+		FF90670E194F1C3C00DCD230 /* crearcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crearcarpeta.cpp; sourceTree = "<group>"; };
+		FF90670F194F1C3C00DCD230 /* eliminarcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarcarpeta.cpp; sourceTree = "<group>"; };
+		FF906710194F1C3C00DCD230 /* eliminarfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eliminarfichero.cpp; sourceTree = "<group>"; };
+		FF906711194F1C3C00DCD230 /* esfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = esfichero.cpp; sourceTree = "<group>"; };
+		FF906712194F1C3C00DCD230 /* getcarpeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getcarpeta.cpp; sourceTree = "<group>"; };
+		FF906713194F1C3C00DCD230 /* guardarconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guardarconfiguracion.cpp; sourceTree = "<group>"; };
+		FF906714194F1C3C00DCD230 /* leerconfiguracion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leerconfiguracion.cpp; sourceTree = "<group>"; };
+		FF906715194F1C3C00DCD230 /* tamfichero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tamfichero.cpp; sourceTree = "<group>"; };
+		FF906716194F1C3C00DCD230 /* ultimamodificacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ultimamodificacion.cpp; sourceTree = "<group>"; };
+		FF906717194F1C3C00DCD230 /* funciones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = funciones.cpp; sourceTree = "<group>"; };
+		FF906718194F1C3C00DCD230 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FF906719194F1C3C00DCD230 /* Sincronizacion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sincronizacion.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,29 +66,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA298C531947594B00A8EFE5 /* libficheros.a in Frameworks */,
+				FF90672919507CAA00DCD230 /* libficheros.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA298C511947594B00A8EFE5 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				CA298C521947594B00A8EFE5 /* libficheros.a */,
-			);
-			name = lib;
-			path = ../lib;
-			sourceTree = "<group>";
-		};
 		CA4B8EF719361CB800DFF88B = {
 			isa = PBXGroup;
 			children = (
-				CA298C511947594B00A8EFE5 /* lib */,
-				CA4B8F0C19361CDA00DFF88B /* config.cfg */,
-				CA4B8F0D19361CDA00DFF88B /* include */,
-				CA4B8F1119361CDA00DFF88B /* src */,
+				FF906704194F1C3C00DCD230 /* include */,
+				FF906708194F1C3C00DCD230 /* lib */,
+				FF90670A194F1C3C00DCD230 /* src */,
 				CA4B8F0219361CB800DFF88B /* Sincronizador */,
 				CA4B8F0119361CB800DFF88B /* Products */,
 			);
@@ -111,43 +100,52 @@
 			path = Sincronizador;
 			sourceTree = "<group>";
 		};
-		CA4B8F0D19361CDA00DFF88B /* include */ = {
+		FF906704194F1C3C00DCD230 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CA4B8F0E19361CDA00DFF88B /* ficheros.h */,
-				CA4B8F0F19361CDA00DFF88B /* funciones.h */,
-				CA4B8F1019361CDA00DFF88B /* Sincronizacion.h */,
+				FF906705194F1C3C00DCD230 /* ficheros.h */,
+				FF906706194F1C3C00DCD230 /* funciones.h */,
+				FF906707194F1C3C00DCD230 /* Sincronizacion.h */,
 			);
 			name = include;
-			path = ../include;
+			path = ../Codigo/include;
 			sourceTree = "<group>";
 		};
-		CA4B8F1119361CDA00DFF88B /* src */ = {
+		FF906708194F1C3C00DCD230 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				CA4B8F1E19361CDA00DFF88B /* funciones.cpp */,
-				CA4B8F1F19361CDA00DFF88B /* main.cpp */,
-				FF1CE6E7194F0F57007CA1DF /* ficheros */,
-				CA4B8F2019361CDA00DFF88B /* Sincronizacion.cpp */,
+				FF906709194F1C3C00DCD230 /* libficheros.a */,
+			);
+			name = lib;
+			path = ../Codigo/lib;
+			sourceTree = "<group>";
+		};
+		FF90670A194F1C3C00DCD230 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FF90670B194F1C3C00DCD230 /* ficheros */,
+				FF906717194F1C3C00DCD230 /* funciones.cpp */,
+				FF906718194F1C3C00DCD230 /* main.cpp */,
+				FF906719194F1C3C00DCD230 /* Sincronizacion.cpp */,
 			);
 			name = src;
-			path = ../src;
+			path = ../Codigo/src;
 			sourceTree = "<group>";
 		};
-		FF1CE6E7194F0F57007CA1DF /* ficheros */ = {
+		FF90670B194F1C3C00DCD230 /* ficheros */ = {
 			isa = PBXGroup;
 			children = (
-				FF1CE6E8194F0F57007CA1DF /* compararficheros.cpp */,
-				FF1CE6E9194F0F57007CA1DF /* copiarfichero.cpp */,
-				FF1CE6EA194F0F57007CA1DF /* crearcarpeta.cpp */,
-				FF1CE6EB194F0F57007CA1DF /* eliminarcarpeta.cpp */,
-				FF1CE6EC194F0F57007CA1DF /* eliminarfichero.cpp */,
-				FF1CE6ED194F0F57007CA1DF /* esfichero.cpp */,
-				FF1CE6EE194F0F57007CA1DF /* getcarpeta.cpp */,
-				FF1CE6EF194F0F57007CA1DF /* guardarconfiguracion.cpp */,
-				FF1CE6F0194F0F57007CA1DF /* leerconfiguracion.cpp */,
-				FF1CE6F1194F0F57007CA1DF /* tamfichero.cpp */,
-				FF1CE6F2194F0F57007CA1DF /* ultimamodificacion.cpp */,
+				FF90670C194F1C3C00DCD230 /* compararficheros.cpp */,
+				FF90670D194F1C3C00DCD230 /* copiarfichero.cpp */,
+				FF90670E194F1C3C00DCD230 /* crearcarpeta.cpp */,
+				FF90670F194F1C3C00DCD230 /* eliminarcarpeta.cpp */,
+				FF906710194F1C3C00DCD230 /* eliminarfichero.cpp */,
+				FF906711194F1C3C00DCD230 /* esfichero.cpp */,
+				FF906712194F1C3C00DCD230 /* getcarpeta.cpp */,
+				FF906713194F1C3C00DCD230 /* guardarconfiguracion.cpp */,
+				FF906714194F1C3C00DCD230 /* leerconfiguracion.cpp */,
+				FF906715194F1C3C00DCD230 /* tamfichero.cpp */,
+				FF906716194F1C3C00DCD230 /* ultimamodificacion.cpp */,
 			);
 			path = ficheros;
 			sourceTree = "<group>";
@@ -203,20 +201,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4B8F2C19361CDA00DFF88B /* funciones.cpp in Sources */,
-				FF1CE6F3194F0F57007CA1DF /* compararficheros.cpp in Sources */,
-				FF1CE6FA194F0F57007CA1DF /* guardarconfiguracion.cpp in Sources */,
-				FF1CE6F4194F0F57007CA1DF /* copiarfichero.cpp in Sources */,
-				FF1CE6FD194F0F57007CA1DF /* ultimamodificacion.cpp in Sources */,
-				FF1CE6F9194F0F57007CA1DF /* getcarpeta.cpp in Sources */,
-				CA4B8F2E19361CDA00DFF88B /* Sincronizacion.cpp in Sources */,
-				FF1CE6F6194F0F57007CA1DF /* eliminarcarpeta.cpp in Sources */,
-				FF1CE6F7194F0F57007CA1DF /* eliminarfichero.cpp in Sources */,
-				FF1CE6F5194F0F57007CA1DF /* crearcarpeta.cpp in Sources */,
-				FF1CE6FB194F0F57007CA1DF /* leerconfiguracion.cpp in Sources */,
-				FF1CE6F8194F0F57007CA1DF /* esfichero.cpp in Sources */,
-				CA4B8F2D19361CDA00DFF88B /* main.cpp in Sources */,
-				FF1CE6FC194F0F57007CA1DF /* tamfichero.cpp in Sources */,
+				FF906726194F1C3C00DCD230 /* funciones.cpp in Sources */,
+				FF906723194F1C3C00DCD230 /* leerconfiguracion.cpp in Sources */,
+				FF906721194F1C3C00DCD230 /* getcarpeta.cpp in Sources */,
+				FF90671F194F1C3C00DCD230 /* eliminarfichero.cpp in Sources */,
+				FF90671C194F1C3C00DCD230 /* copiarfichero.cpp in Sources */,
+				FF90671E194F1C3C00DCD230 /* eliminarcarpeta.cpp in Sources */,
+				FF906728194F1C3C00DCD230 /* Sincronizacion.cpp in Sources */,
+				FF906725194F1C3C00DCD230 /* ultimamodificacion.cpp in Sources */,
+				FF90671D194F1C3C00DCD230 /* crearcarpeta.cpp in Sources */,
+				FF906720194F1C3C00DCD230 /* esfichero.cpp in Sources */,
+				FF906722194F1C3C00DCD230 /* guardarconfiguracion.cpp in Sources */,
+				FF906727194F1C3C00DCD230 /* main.cpp in Sources */,
+				FF90671B194F1C3C00DCD230 /* compararficheros.cpp in Sources */,
+				FF906724194F1C3C00DCD230 /* tamfichero.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +298,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 					/Users/Sastre/GitHub/Sincronizador/lib,
+					/Users/antoniosastre/GitHub/Sincronizador/Codigo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -312,6 +311,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
 					/Users/Sastre/GitHub/Sincronizador/lib,
+					/Users/antoniosastre/GitHub/Sincronizador/Codigo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
