@@ -14,6 +14,11 @@
 
 using namespace std;
 
+/*
+ *  Funciones auxiliares para las acciones pasadas por parámetros.
+ *
+ */
+
 void mostrarSincronizaciones(Sincronizacion &sinc){
     cout << "Sincronizaciones del fichero de configuración:" << endl;
     sinc.imprimir();

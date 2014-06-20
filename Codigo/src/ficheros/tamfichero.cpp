@@ -14,6 +14,8 @@ int tamFichero(char *archivo){
     fe.open(archivo);
     if (!fe) return -1;
     
+    //Calcula el tamaño del fichero en número de caracteres.
+    
     while (!fe.eof()) {
         fe.get();
         tam++;

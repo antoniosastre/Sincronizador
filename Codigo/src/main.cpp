@@ -20,16 +20,20 @@ int main(int argc, const char * argv[]){
     bool mostrarAyuda = false;
     Sincronizacion sinc;
     
+    //Comprobamos que haya algún argumento.
     if (argc<=1) {
         mostrarAyuda = true;
     }else{
         
+        
+        //Recorremos los argumentos buscando el archivo de configuración o si hay que mostrar la ayuda.
         for (int i=1; i<argc; i++) {
             if (argv[i][0] == '-' && argv[i][1] == 'h') {
                 mostrarAyuda = true;
                 
             }else if (argv[i][0] == '-' && argv[i][1] == 'c') {
                 
+                //Si no hay errores de sintaxis se prodece a cargar el fichero de configuración.
                 if(i+1<argc && argv[i+1][0] != '-'){
                     cflag=1;
                     if(!cargarFicheroCfg((char *)argv[++i], sinc)){
@@ -44,8 +48,9 @@ int main(int argc, const char * argv[]){
         }
         
         
+        //Primero miramos si ha sincronizaciones por añadir.
+        
         for (int i=1; i<argc; i++) {
-            
             
             if (argv[i][0] == '-' && argv[i][1] == 'e') {
                 
@@ -65,6 +70,7 @@ int main(int argc, const char * argv[]){
             }
         }
         
+        //Luego si hay sincronizaciones por eliminar.
         
         for (int i=1; i<argc; i++) {
             
@@ -85,6 +91,7 @@ int main(int argc, const char * argv[]){
         }
         
         
+        //Luego mostramos las que han quedado.
         
         for (int i=1; i<argc; i++) {
             
@@ -95,6 +102,8 @@ int main(int argc, const char * argv[]){
             }
         }
         
+        
+        //Y ejecutamos según los parámetros que haya.
         
         for (int i=1; i<argc; i++) {
             
@@ -119,6 +128,8 @@ int main(int argc, const char * argv[]){
         
         
     }
+    
+    //Si se ha decidido que hay que mostrar la ayuda, se muestra ahora.
     
     if (mostrarAyuda) ayuda();
     

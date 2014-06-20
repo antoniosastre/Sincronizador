@@ -26,6 +26,7 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     int control;
     
     //Comprobación de integridad del fichero.
+    //Primero se lee completamente el fichero para comprobar que los datos son consistentes.
     
     for (int i=0; i<sincs; i++) {
         
@@ -65,7 +66,8 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     fe.close();
     
     
-    //Lectura del fichero
+    //Lectura del fichero.
+    //En la segunda lectura, sabiendo que los datos son correctos, guardamos los datos.
     
     fe.open(fichero);
     if (!fe)

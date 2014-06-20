@@ -9,8 +9,13 @@ using namespace std;
 
 bool compararFicheros(const char* f1, const char* f2){
     
+    
+    //Abrimos los dos ficheros.
+    
     ifstream file1(f1);
     ifstream file2(f2);
+    
+    //Comprobamos que se hayan abierto los dos. Si alguno no se ha abierto, cerramos el otro.
     
     if (!file1.good() && !file2.good()) {
         
@@ -32,7 +37,10 @@ bool compararFicheros(const char* f1, const char* f2){
         
     }else{
         
+        
         while (!file1.eof() && !file2.eof()) {
+            
+            //Hacemos una comprobación caracter a caracter.
             
             if(file1.get() != file2.get()){
                 file1.close();

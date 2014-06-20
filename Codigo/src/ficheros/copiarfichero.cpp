@@ -14,6 +14,8 @@ bool copiarFichero(const char *origen, const char *destino){
     ofstream ofile(destino);
     char carac;
     
+    //Comprobamos que se han abierto correctamente los dos ficheros.
+    
     if (!ifile.good() && !ofile.good()) {
         
         cerr << "ERROR: No se pudo abrir para lectura: " << origen << endl;
@@ -35,6 +37,8 @@ bool copiarFichero(const char *origen, const char *destino){
     }else{
         
         while (!ifile.eof()) {
+            
+            //Hacemos una copia caracter a caracter. Más lenta pero más sencilla.
             
             carac = ifile.get();
             if (!ifile.eof())
