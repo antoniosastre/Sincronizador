@@ -18,6 +18,8 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     
     fe.open(fichero);
     if (!fe)
+        //Aquí debería crear el fichero porque no existe.
+        //Luego debería seguir normalmente.
         return -1;
     
     fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);

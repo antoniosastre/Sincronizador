@@ -31,6 +31,7 @@ void ejecutarSincronizaciones(Sincronizacion &sinc){
 
 void ejecutarSincronizaciones(char *c1, char *c2, Sincronizacion &sinc){
     cout << "[[Solo se ejecuta la sincronización entre: \"" << c1 << " y " << c2 << "\" pasada por argumento]]" << endl;
+    sinc.ejecutar(c1, c2);
 }
 
 void ayuda(){
