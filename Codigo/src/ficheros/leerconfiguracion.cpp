@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <cstring>
 
 
 using namespace std;
@@ -15,10 +16,13 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     int sincs;
     char buffer[MAX_FICHERO_CONFIG_LINE_SIZE+1];
     
-    
     fe.open(fichero);
-    if (!fe)
-        return -1;
+    if (!fe){
+        ofstream temp(fichero);
+        temp.close();
+        fe.open(fichero);
+    }
+    if (!fe)  return -1;
     
     fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
     sincs = atoi(buffer);
