@@ -17,12 +17,19 @@ int LeerConfiguracion(const char *fichero, char **&carpetas1, char **&carpetas2,
     char buffer[MAX_FICHERO_CONFIG_LINE_SIZE+1];
     
     fe.open(fichero);
+<<<<<<< HEAD
     if (!fe){
         ofstream temp(fichero);
         temp.close();
         fe.open(fichero);
     }
     if (!fe)  return -1;
+=======
+    if (!fe)
+        //Aquí debería crear el fichero porque no existe.
+        //Luego debería seguir normalmente.
+        return -1;
+>>>>>>> FETCH_HEAD
     
     fe.getline(buffer, MAX_FICHERO_CONFIG_LINE_SIZE);
     sincs = atoi(buffer);
